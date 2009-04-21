@@ -1,0 +1,4 @@
+Title: Decoupling Workflow From Forms With An Application Controller And IoC Container
+
+Description:
+In the development and maintenance of a WinForms application, using a Model-View-Presenter setup, over the last two years, I've ran into a fairly significant challenge: I had my workflow between forms coupled to the forms directly. For example, to get from MainForm to SubForm, code inside of MainForm would instantiate SubForm, it's Presenter, and all of the dependencies of each of  thesse. In this application, the form codebehind would often contain several hundred lines of code to create all the needed views, presenters, etc for a workflow - per workflow. By introducing the concept Application Controller, in combination with a good IoC Container, we can quickly and easily reduce the tight coupling between our forms, while simplifying our presenters and enabling the workflow to change independently of the forms and presenters.

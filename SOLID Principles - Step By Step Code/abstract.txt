@@ -1,0 +1,4 @@
+Title: S.O.L.I.D. Software Development: Achieving Object Oriented Principles, One Step At A Time 
+
+Description:
+Almost every professional software developer understands the academic definitions of Coupling, Cohesion, and Encapsulation. However, many of us do not understand how to actually achieve Low Coupling, High Cohesion, and strong Encapsulation, as prescribed. Fortunately, there are a set of stepping stones that we can use to reach these end goals, giving us a clear cut path to software that is easier to read, easier to understand, and easier to change. This presentation will define not only the three object oriented goals, but also the five S.O.L.I.D. principle that lead us there, while walking through a sample application. 
