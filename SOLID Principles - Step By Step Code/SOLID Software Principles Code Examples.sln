@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{46EDBAF7-230C-4A7E-8F20-20709EBC9F5B}"
+	ProjectSection(SolutionItems) = preProject
+		Files\database connection.conn = Files\database connection.conn
+		Files\test email body.txt = Files\test email body.txt
+		Files\test email info.xml = Files\test email info.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App", "Sample App\SOLID Sample App.csproj", "{5117CC9E-79FB-47A4-8D87-29CE40464491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App - DIP", "Sample App - DIP\SOLID Sample App - DIP.csproj", "{17011403-28B9-4DC3-8BA2-AD3BDC8A52CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App - ISP", "Sample App - ISP\SOLID Sample App - ISP.csproj", "{C67A7F3E-C6A6-4FD4-9560-C61319F655B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App - OCP", "Sample App - OCP\SOLID Sample App - OCP.csproj", "{DE249CD2-C2E7-428E-B423-67008E863927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App - SRP", "Sample App - SRP\SOLID Sample App - SRP.csproj", "{D7FBDCCC-1A3D-4C4E-90E9-19CBE640D6F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App - LSP Violation", "Sample App - LSP Violation\SOLID Sample App - LSP Violation.csproj", "{03A9EC1D-510F-4C0B-94C8-8D24231AE231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID Sample App - LSP Correction", "Sample App - LSP Correction\SOLID Sample App - LSP Correction.csproj", "{3EBA5A6B-803B-41B0-BC74-2ECC2631A651}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5117CC9E-79FB-47A4-8D87-29CE40464491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5117CC9E-79FB-47A4-8D87-29CE40464491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5117CC9E-79FB-47A4-8D87-29CE40464491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5117CC9E-79FB-47A4-8D87-29CE40464491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17011403-28B9-4DC3-8BA2-AD3BDC8A52CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17011403-28B9-4DC3-8BA2-AD3BDC8A52CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17011403-28B9-4DC3-8BA2-AD3BDC8A52CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17011403-28B9-4DC3-8BA2-AD3BDC8A52CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67A7F3E-C6A6-4FD4-9560-C61319F655B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67A7F3E-C6A6-4FD4-9560-C61319F655B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67A7F3E-C6A6-4FD4-9560-C61319F655B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67A7F3E-C6A6-4FD4-9560-C61319F655B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE249CD2-C2E7-428E-B423-67008E863927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE249CD2-C2E7-428E-B423-67008E863927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE249CD2-C2E7-428E-B423-67008E863927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE249CD2-C2E7-428E-B423-67008E863927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7FBDCCC-1A3D-4C4E-90E9-19CBE640D6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7FBDCCC-1A3D-4C4E-90E9-19CBE640D6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7FBDCCC-1A3D-4C4E-90E9-19CBE640D6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7FBDCCC-1A3D-4C4E-90E9-19CBE640D6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A9EC1D-510F-4C0B-94C8-8D24231AE231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A9EC1D-510F-4C0B-94C8-8D24231AE231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A9EC1D-510F-4C0B-94C8-8D24231AE231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A9EC1D-510F-4C0B-94C8-8D24231AE231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EBA5A6B-803B-41B0-BC74-2ECC2631A651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBA5A6B-803B-41B0-BC74-2ECC2631A651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBA5A6B-803B-41B0-BC74-2ECC2631A651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBA5A6B-803B-41B0-BC74-2ECC2631A651}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
+	EndGlobalSection
+EndGlobal
