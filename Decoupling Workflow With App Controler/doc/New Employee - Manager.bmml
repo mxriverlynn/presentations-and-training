@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" measuredW="483" measuredH="216">
+  <controls>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TitleWindow" x="23" y="20" w="450" h="186" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <text>Simple%20Org%20Chart%20%3A%3A%20Add%20New%20Employee%20%3A%3A%20Manager</text>
+        <minimize>true</minimize>
+        <bottomheight>20</bottomheight>
+        <dragger>true</dragger>
+        <topheight>28</topheight>
+        <maximizeRestore>true</maximizeRestore>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="38" y="68" w="-1" h="-1" measuredW="72" measuredH="25" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Employee%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="38" y="108" w="-1" h="-1" measuredW="116" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20Manager%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextInput" x="161" y="66" w="297" h="-1" measuredW="285" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Purcell%2C%20Eddie%20%28eddie.purcell@example.com%29</text>
+        <state>disabled</state>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="38" y="148" w="144" h="-1" measuredW="53" measuredH="28" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Back</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="314" y="148" w="144" h="-1" measuredW="54" measuredH="28" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Done</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::ComboBox" x="161" y="107" w="297" h="-1" measuredW="263" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Jones%2C%20Bob%20%28bob.jones@example.com%29</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
