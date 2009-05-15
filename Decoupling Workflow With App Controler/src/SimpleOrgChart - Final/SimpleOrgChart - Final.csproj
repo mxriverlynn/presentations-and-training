@@ -60,12 +60,16 @@
     <Compile Include="AppController\ApplicationController.cs" />
     <Compile Include="AppController\IApplicationController.cs" />
     <Compile Include="AppController\ICommand.cs" />
+    <Compile Include="App\AddNewEmployeeCommand.cs" />
+    <Compile Include="App\EmployeeSelectedEvent.cs" />
     <Compile Include="App\IOrgChartView.cs" />
     <Compile Include="App\OrgChartPresenter.cs" />
     <Compile Include="BootStrapper.cs" />
     <Compile Include="DefaultRegistry.cs" />
     <Compile Include="EventAggregatorInterceptor.cs" />
     <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\InMemoryEmployeeRepository.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
