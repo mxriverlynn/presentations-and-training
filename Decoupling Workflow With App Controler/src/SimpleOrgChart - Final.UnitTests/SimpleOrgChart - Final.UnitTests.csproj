@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="AddNewEmployeeSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewEmployeeDetailSpecs.cs" />
     <Compile Include="ViewOrgChartSpecs.cs" />
   </ItemGroup>
   <ItemGroup>

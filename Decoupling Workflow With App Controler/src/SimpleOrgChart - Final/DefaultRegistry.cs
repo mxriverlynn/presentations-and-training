@@ -1,10 +1,15 @@
 using System.Windows.Forms;
 using EventAggregator;
+using SimpleOrgChart___Final.App;
 using SimpleOrgChart___Final.AppController;
+using SimpleOrgChart___Final.Model;
+using SimpleOrgChart___Final.Repositories;
+using SimpleOrgChart___Final.View;
 using StructureMap.Configuration.DSL;
 
 namespace SimpleOrgChart___Final
 {
+
 	public class DefaultRegistry : Registry
 	{
 
@@ -20,8 +25,19 @@ namespace SimpleOrgChart___Final
 				.AsSingletons()
 				.TheDefault.Is.OfConcreteType<EventPublisher>();
 
+			ForRequestedType<IOrgChartView>()
+				.TheDefaultIsConcreteType<MainForm>()
+				.OnCreation((i,v) => i.GetInstance<EmployeeDetailPresenter>());
+
+			ForRequestedType<IEmployeeRepository>()
+				.TheDefaultIsConcreteType<InMemoryEmployeeRepository>();
+
+			ForRequestedType<IEmployeeDetailView>()
+				.TheDefaultIsConcreteType<ViewEmployeeDetailControl>();
+
 			RegisterInterceptor(new EventAggregatorInterceptor());
 		}
 
 	}
+
 }

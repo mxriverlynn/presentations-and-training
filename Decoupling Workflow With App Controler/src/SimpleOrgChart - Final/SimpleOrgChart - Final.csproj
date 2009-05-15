@@ -60,10 +60,21 @@
     <Compile Include="AppController\ApplicationController.cs" />
     <Compile Include="AppController\IApplicationController.cs" />
     <Compile Include="AppController\ICommand.cs" />
-    <Compile Include="App\AddNewEmployeeCommand.cs" />
+    <Compile Include="App\NewEmployeeProcess\AddNewEmployeeCommand.cs" />
+    <Compile Include="App\NewEmployeeProcess\AddNewEmployeeData.cs" />
+    <Compile Include="App\EmployeeDetailPresenter.cs" />
     <Compile Include="App\EmployeeSelectedEvent.cs" />
+    <Compile Include="App\IEmployeeDetailView.cs" />
     <Compile Include="App\IOrgChartView.cs" />
+    <Compile Include="App\NewEmployeeProcess\AddNewEmployeeService.cs" />
+    <Compile Include="App\NewEmployeeProcess\EmployeeAddedEvent.cs" />
+    <Compile Include="App\NewEmployeeProcess\EmployeeInfo.cs" />
+    <Compile Include="App\NewEmployeeProcess\IAddNewEmployeeService.cs" />
+    <Compile Include="App\NewEmployeeProcess\IGetEmployeeManager.cs" />
+    <Compile Include="App\NewEmployeeProcess\IGetNewEmployeeInfo.cs" />
     <Compile Include="App\OrgChartPresenter.cs" />
+    <Compile Include="App\Result.cs" />
+    <Compile Include="App\ServiceResult.cs" />
     <Compile Include="BootStrapper.cs" />
     <Compile Include="DefaultRegistry.cs" />
     <Compile Include="EventAggregatorInterceptor.cs" />
@@ -86,6 +97,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewEmployeeDetailControl.resx">
+      <DependentUpon>ViewEmployeeDetailControl.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -98,6 +112,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\ViewEmployeeDetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewEmployeeDetailControl.Designer.cs">
+      <DependentUpon>ViewEmployeeDetailControl.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

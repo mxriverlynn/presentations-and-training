@@ -5,6 +5,7 @@ namespace SimpleOrgChart___Final.Model
 		public string FirstName { get; private set; }
 		public string LastName { get; private set; }
 		public string Email { get; private set; }
+		public Employee Manager { get; set; }
 
 		public Employee(string firstName, string lastName, string email)
 		{

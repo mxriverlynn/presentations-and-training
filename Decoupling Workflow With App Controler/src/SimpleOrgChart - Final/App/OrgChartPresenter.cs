@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using EventAggregator;
+using SimpleOrgChart___Final.App.NewEmployeeProcess;
 using SimpleOrgChart___Final.AppController;
 using SimpleOrgChart___Final.Model;
 
 namespace SimpleOrgChart___Final.App
 {
 
-	public class OrgChartPresenter: IEventHandler<EmployeeSelectedEvent>
+	public class OrgChartPresenter
 	{
 
 		private IOrgChartView View { get; set; }
@@ -32,16 +32,9 @@ namespace SimpleOrgChart___Final.App
 			AppController.Raise(new EmployeeSelectedEvent(selectedEmployee));
 		}
 
-		public void Handle(EmployeeSelectedEvent eventData)
-		{
-			Employee employee = eventData.Employee;
-			View.DisplayEmployeeName(employee.FirstName, employee.LastName);
-			View.DisplayEmployeeEmail(employee.Email);
-		}
-
 		public void AddNewEmployeeRequested()
 		{
-			AppController.Execute(new AddNewEmployeeCommand());
+			AppController.Execute(new AddNewEmployeeData());
 		}
 	}
 

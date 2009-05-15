@@ -7,7 +7,5 @@ namespace SimpleOrgChart___Final.App
 	{
 		void DisplayEmployeeHierarchy(IList<Employee> employees);
 		OrgChartPresenter Presenter { get; set; }
-		void DisplayEmployeeName(string firstName, string lastName);
-		void DisplayEmployeeEmail(string email);
 	}
 }

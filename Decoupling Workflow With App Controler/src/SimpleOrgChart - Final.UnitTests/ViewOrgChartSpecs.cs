@@ -87,35 +87,6 @@ namespace SimpleOrgChart___Final.UnitTests
 
 		}
 
-		[TestFixture]
-		[Concern("View Org Chart")]
-		public class When_an_employee_has_been_selected : ViewOrgChartSpecsContext
-		{
-
-			protected override void Context()
-			{
-				OrgChartPresenter presenter = GetPresenter();
-				presenter.Run();
-
-				presenter.Handle(new EmployeeSelectedEvent(bob));
-			}
-
-			[Test]
-			[Observation]
-			public void Should_show_the_employee_name()
-			{
-				view.AssertWasCalled(v => v.DisplayEmployeeName(bob.FirstName, bob.LastName));
-			}
-
-			[Test]
-			[Observation]
-			public void Should_show_the_employee_email()
-			{
-				view.AssertWasCalled(v => v.DisplayEmployeeEmail(bob.Email));
-			}
-
-		}
-
 	}
 
 }

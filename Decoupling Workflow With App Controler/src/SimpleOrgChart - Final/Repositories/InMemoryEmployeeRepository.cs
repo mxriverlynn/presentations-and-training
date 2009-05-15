@@ -14,6 +14,11 @@ namespace SimpleOrgChart___Final.Repositories
 			return employeeList;
 		}
 
+		public void Save(Employee employee)
+		{
+			employeeList.Add(employee);
+		}
+
 	}
 
 }

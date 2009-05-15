@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using SimpleOrgChart___Final.App;
 using SimpleOrgChart___Final.View;
 using StructureMap;
 
@@ -17,9 +18,12 @@ namespace SimpleOrgChart___Final
 
 		private Form GetMainForm()
 		{
-			MainForm mainForm = new MainForm();
-			//Container.Inject<IMainView>(mainForm);
-			//Container.GetInstance<MainPresenter>();
+			MainForm mainForm = new MainForm(Container);
+			Container.Inject<IOrgChartView>(mainForm);
+			
+			OrgChartPresenter presenter = Container.GetInstance<OrgChartPresenter>();
+			presenter.Run();
+			
 			return mainForm;
 		}
 
