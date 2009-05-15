@@ -87,6 +87,27 @@ namespace SimpleOrgChart___Final.UnitTests
 
 		}
 
+		[TestFixture]
+		[Concern("View Org Chart")]
+		public class When_a_new_employee_has_been_added : ViewOrgChartSpecsContext
+		{
+
+			protected override void Context()
+			{
+				OrgChartPresenter presenter = GetPresenter();
+				presenter.Handle(new EmployeeAddedEvent());
+			}
+
+			[Test]
+			[Observation]
+			public void Should_update_the_org_chart_display()
+			{
+				
+			}
+
+		}
+
+
 	}
 
 }

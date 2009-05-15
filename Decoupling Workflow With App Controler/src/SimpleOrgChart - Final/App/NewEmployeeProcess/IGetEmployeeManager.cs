@@ -4,6 +4,6 @@ namespace SimpleOrgChart___Final.App.NewEmployeeProcess
 {
 	public interface IGetEmployeeManager
 	{
-		Employee Get();
+		Employee GetManagerFor(Employee employee);
 	}
 }

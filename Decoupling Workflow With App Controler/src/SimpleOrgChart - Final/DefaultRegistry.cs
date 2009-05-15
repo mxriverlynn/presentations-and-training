@@ -1,6 +1,9 @@
 using System.Windows.Forms;
 using EventAggregator;
 using SimpleOrgChart___Final.App;
+using SimpleOrgChart___Final.App.NewEmployeeProcess;
+using SimpleOrgChart___Final.App.NewEmployeeProcess.SelectEmployeeManager;
+using SimpleOrgChart___Final.App.NewEmployeeProcess.SupplyEmployeeInfo;
 using SimpleOrgChart___Final.AppController;
 using SimpleOrgChart___Final.Model;
 using SimpleOrgChart___Final.Repositories;
@@ -34,6 +37,24 @@ namespace SimpleOrgChart___Final
 
 			ForRequestedType<IEmployeeDetailView>()
 				.TheDefaultIsConcreteType<ViewEmployeeDetailControl>();
+
+			ForRequestedType<IAddNewEmployeeService>()
+				.TheDefaultIsConcreteType<AddNewEmployeeService>();
+
+			ForRequestedType<ICommand<AddNewEmployeeData>>()
+				.TheDefaultIsConcreteType<AddNewEmployeeCommand>();
+
+			ForRequestedType<IGetNewEmployeeInfo>()
+				.TheDefaultIsConcreteType<NewEmployeeInfoPresenter>();
+
+			ForRequestedType<INewEmployeeInfoView>()
+				.TheDefaultIsConcreteType<NewEmployeeInfoForm>();
+
+			ForRequestedType<IGetEmployeeManager>()
+				.TheDefaultIsConcreteType<SelectEmployeeManagerPresenter>();
+
+			ForRequestedType<ISelectEmployeeManagerView>()
+				.TheDefaultIsConcreteType<SelectEmployeeManagerForm>();
 
 			RegisterInterceptor(new EventAggregatorInterceptor());
 		}

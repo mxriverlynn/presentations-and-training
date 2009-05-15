@@ -14,11 +14,31 @@ namespace SimpleOrgChart___Final.Repositories
 			return employeeList;
 		}
 
-		public void Save(Employee employee)
+		public IList<Employee> GetManagerList()
 		{
-			employeeList.Add(employee);
+			IList<Employee> flattenedList = new List<Employee>();
+			foreach(Employee employee in employeeList)
+			{
+				flattenedList.Add(employee);
+				IList<Employee> subEmployees = GetSubEmployees(employee);
+				foreach (Employee subEmployee in subEmployees)
+					flattenedList.Add(subEmployee);
+			}
+			return flattenedList;
 		}
 
+		private IList<Employee> GetSubEmployees(Employee manager)
+		{
+			IList<Employee> flattenedList = new List<Employee>();
+			foreach (Employee employee in manager.Employees)
+			{
+				flattenedList.Add(employee);
+				IList<Employee> subEmployees = GetSubEmployees(employee);
+				foreach(Employee subEmployee in subEmployees)
+					flattenedList.Add(subEmployee);
+			}
+			return flattenedList;			
+		}
 	}
 
 }

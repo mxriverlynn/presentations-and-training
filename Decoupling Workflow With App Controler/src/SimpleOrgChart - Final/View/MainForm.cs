@@ -20,14 +20,38 @@ namespace SimpleOrgChart___Final.View
 
 		public void DisplayEmployeeHierarchy(IList<Employee> employees)
 		{
+			OrgChart.Nodes.Clear();
+
 			foreach(Employee employee in employees)
 			{
-				string displayName = string.Format("{1}, {0}", employee.FirstName, employee.LastName);
-				TreeNode node = new TreeNode(displayName);
-				node.Tag = employee;
+				TreeNode node = GetNode(employee);
+				IList<TreeNode> children = GetChildren(employee);
+				foreach (TreeNode childNode in children)
+					node.Nodes.Add(childNode);
 				OrgChart.Nodes.Add(node);
 			}
-			
+			OrgChart.ExpandAll();
+		}
+
+		private TreeNode GetNode(Employee employee)
+		{
+			TreeNode node = new TreeNode(employee.DisplayName);
+			node.Tag = employee;
+			return node;
+		}
+
+		private IList<TreeNode> GetChildren(Employee employee)
+		{
+			IList<TreeNode> nodes = new List<TreeNode>();
+			foreach(Employee child in employee.Employees)
+			{
+				TreeNode node = GetNode(child);
+				IList<TreeNode> children = GetChildren(child);
+				foreach (TreeNode childNode in children)
+					node.Nodes.Add(childNode);
+				nodes.Add(node);
+			}
+			return nodes;
 		}
 
 		private void OrgChart_AfterSelect(object sender, TreeViewEventArgs e)

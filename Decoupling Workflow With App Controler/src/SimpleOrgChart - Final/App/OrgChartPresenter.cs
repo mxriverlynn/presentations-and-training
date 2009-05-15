@@ -1,12 +1,14 @@
 using System.Collections.Generic;
+using EventAggregator;
 using SimpleOrgChart___Final.App.NewEmployeeProcess;
 using SimpleOrgChart___Final.AppController;
 using SimpleOrgChart___Final.Model;
+using SimpleOrgChart___Final.UnitTests;
 
 namespace SimpleOrgChart___Final.App
 {
 
-	public class OrgChartPresenter
+	public class OrgChartPresenter: IEventHandler<EmployeeAddedEvent>
 	{
 
 		private IOrgChartView View { get; set; }
@@ -23,8 +25,7 @@ namespace SimpleOrgChart___Final.App
 
 		public void Run()
 		{
-			IList<Employee> employeeList = Repository.GetEmployeeOrgChart();
-			View.DisplayEmployeeHierarchy(employeeList);
+			ShowEmployeeHierarchy();
 		}
 
 		public void EmployeeSelected(Employee selectedEmployee)
@@ -36,6 +37,18 @@ namespace SimpleOrgChart___Final.App
 		{
 			AppController.Execute(new AddNewEmployeeData());
 		}
+
+		public void Handle(EmployeeAddedEvent employeeAddedEvent)
+		{
+			ShowEmployeeHierarchy();
+		}
+
+		private void ShowEmployeeHierarchy()
+		{
+			IList<Employee> employeeList = Repository.GetEmployeeOrgChart();
+			View.DisplayEmployeeHierarchy(employeeList);
+		}
+
 	}
 
 }

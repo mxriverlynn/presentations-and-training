@@ -5,6 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart - Final", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart - Final.UnitTests", "SimpleOrgChart - Final.UnitTests\SimpleOrgChart - Final.UnitTests.csproj", "{D9510FAB-D557-49BA-9EC2-493AF83420FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{9802887A-3B49-413C-98EA-0BCF72545401}"
+	ProjectSection(SolutionItems) = preProject
+		..\doc\New Employee - Info.png = ..\doc\New Employee - Info.png
+		..\doc\New Employee - Manager.png = ..\doc\New Employee - Manager.png
+		..\doc\Org Chart View.png = ..\doc\Org Chart View.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

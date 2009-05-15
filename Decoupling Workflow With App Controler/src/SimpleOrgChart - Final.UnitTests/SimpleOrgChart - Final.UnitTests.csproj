@@ -71,6 +71,8 @@
   <ItemGroup>
     <Compile Include="AddNewEmployeeSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectManagerSpec.cs" />
+    <Compile Include="SupplyNewEmployeeInfoSpecs.cs" />
     <Compile Include="ViewEmployeeDetailSpecs.cs" />
     <Compile Include="ViewOrgChartSpecs.cs" />
   </ItemGroup>

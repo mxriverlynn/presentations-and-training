@@ -68,7 +68,7 @@
 			this.Controls.Add(this.OrgChart);
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "App Controller Example :: Simple Org Chart";
+			this.Text = "Simple Org Chart";
 			this.ResumeLayout(false);
 
 		}

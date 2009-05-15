@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -62,8 +61,6 @@ namespace SimpleOrgChart___Final.UnitTests
 		{
 			protected IGetNewEmployeeInfo getNewEmployeeInfo;
 			protected IGetEmployeeManager getEmployeeManager;
-			protected IEmployeeRepository employeeRepository;
-			protected Employee newEmployee;
 			protected IApplicationController appController;
 			protected EmployeeInfo employeeInfo;
 
@@ -72,18 +69,16 @@ namespace SimpleOrgChart___Final.UnitTests
 				employeeInfo = new EmployeeInfo { FirstName = "Jim", LastName = "Jones", Email = "jim.jones@example.com" };
 				getNewEmployeeInfo = MockRepository.GenerateMock<IGetNewEmployeeInfo>();
 
+				Employee newEmployee = new Employee("Bob", "Jones", "bob.jones@example.com");
 				getEmployeeManager = MockRepository.GenerateMock<IGetEmployeeManager>();
-				getEmployeeManager.Stub(g => g.Get()).Return(new Employee("Bob", "Jones", "bob.jones@example.com"));
-
-				employeeRepository = MockRepository.GenerateMock<IEmployeeRepository>();
-				employeeRepository.Stub(r => r.Save(null)).IgnoreArguments().Do(new Action<Employee>(e => newEmployee = e));
+				getEmployeeManager.Stub(g => g.GetManagerFor(null)).IgnoreArguments().Return(newEmployee);
 
 				appController = MockRepository.GenerateMock<IApplicationController>();
 			}
 
 			protected IAddNewEmployeeService GetAddNewEmployeeService()
 			{
-				AddNewEmployeeService service = new AddNewEmployeeService(getNewEmployeeInfo, getEmployeeManager, employeeRepository, appController);
+				AddNewEmployeeService service = new AddNewEmployeeService(getNewEmployeeInfo, getEmployeeManager, appController);
 				return service;
 			}
 		}
@@ -142,6 +137,7 @@ namespace SimpleOrgChart___Final.UnitTests
 			{
 				Result<EmployeeInfo> result = new Result<EmployeeInfo>(ServiceResult.Ok, employeeInfo);
 				getNewEmployeeInfo.Stub(g => g.Get()).Return(result);
+
 				IAddNewEmployeeService service = GetAddNewEmployeeService();
 				service.Run();
 			}
@@ -157,21 +153,14 @@ namespace SimpleOrgChart___Final.UnitTests
 			[Observation]
 			public void Should_request_the_employees_manager()
 			{
-				getEmployeeManager.AssertWasCalled(x => x.Get());
+				getEmployeeManager.AssertWasCalled(x => x.GetManagerFor(null), mo => mo.IgnoreArguments().Constraints(Is.TypeOf<Employee>()));
 			}
 
 			[Test]
 			[Observation]
-			public void Should_save_the_new_employee()
+			public void Should_create_the_new_employee()
 			{
-				employeeRepository.AssertWasCalled(r => r.Save(null), mo => mo
-					.IgnoreArguments()
-					.Constraints(Is.TypeOf<Employee>())
-				);
-
-				newEmployee.FirstName.ShouldEqual("Jim");
-				newEmployee.LastName.ShouldEqual("Jones");
-				newEmployee.Email.ShouldEqual("jim.jones@example.com");
+				getEmployeeManager.AssertWasCalled(g => g.GetManagerFor(null), mo => mo.IgnoreArguments());
 			}
 
 			[Test]
@@ -197,13 +186,6 @@ namespace SimpleOrgChart___Final.UnitTests
 				getNewEmployeeInfo.Stub(g => g.Get()).Return(result);
 				IAddNewEmployeeService service = GetAddNewEmployeeService();
 				service.Run();
-			}
-
-			[Test]
-			[Observation]
-			public void Should_not_save_the_employee()
-			{
-				employeeRepository.AssertWasNotCalled(r => r.Save(null), mo => mo.IgnoreArguments());
 			}
 
 			[Test]

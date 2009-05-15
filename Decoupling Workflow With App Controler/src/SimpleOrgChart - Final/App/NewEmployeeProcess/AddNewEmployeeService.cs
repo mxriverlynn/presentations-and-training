@@ -8,14 +8,12 @@ namespace SimpleOrgChart___Final.App.NewEmployeeProcess
 	{
 		private IGetNewEmployeeInfo GetNewEmployeeInfo { get; set; }
 		private IGetEmployeeManager GetEmployeeManager { get; set; }
-		private IEmployeeRepository EmployeeRepository { get; set; }
 		private IApplicationController AppController { get; set; }
 
-		public AddNewEmployeeService(IGetNewEmployeeInfo getNewEmployeeInfo, IGetEmployeeManager getEmployeeManager, IEmployeeRepository employeeRepository, IApplicationController appController)
+		public AddNewEmployeeService(IGetNewEmployeeInfo getNewEmployeeInfo, IGetEmployeeManager getEmployeeManager, IApplicationController appController)
 		{
 			GetNewEmployeeInfo = getNewEmployeeInfo;
 			GetEmployeeManager = getEmployeeManager;
-			EmployeeRepository = employeeRepository;
 			AppController = appController;
 		}
 
@@ -25,10 +23,11 @@ namespace SimpleOrgChart___Final.App.NewEmployeeProcess
 			if (result.ServiceResult == ServiceResult.Ok)
 			{
 				EmployeeInfo info = result.Data;
-				Employee manager = GetEmployeeManager.Get();
 				Employee employee = new Employee(info.FirstName, info.LastName, info.Email);
-				employee.Manager = manager;
-				EmployeeRepository.Save(employee);
+
+				Employee manager = GetEmployeeManager.GetManagerFor(employee);
+				manager.Employees.Add(employee);
+				
 				AppController.Raise(new EmployeeAddedEvent());
 			}
 

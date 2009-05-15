@@ -72,6 +72,10 @@
     <Compile Include="App\NewEmployeeProcess\IAddNewEmployeeService.cs" />
     <Compile Include="App\NewEmployeeProcess\IGetEmployeeManager.cs" />
     <Compile Include="App\NewEmployeeProcess\IGetNewEmployeeInfo.cs" />
+    <Compile Include="App\NewEmployeeProcess\SelectEmployeeManager\ISelectEmployeeManagerView.cs" />
+    <Compile Include="App\NewEmployeeProcess\SelectEmployeeManager\SelectEmployeeManagerPresenter.cs" />
+    <Compile Include="App\NewEmployeeProcess\SupplyEmployeeInfo\INewEmployeeInfoView.cs" />
+    <Compile Include="App\NewEmployeeProcess\SupplyEmployeeInfo\NewEmployeeInfoPresenter.cs" />
     <Compile Include="App\OrgChartPresenter.cs" />
     <Compile Include="App\Result.cs" />
     <Compile Include="App\ServiceResult.cs" />
@@ -97,6 +101,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\NewEmployeeInfoForm.resx">
+      <DependentUpon>NewEmployeeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectEmployeeManagerForm.resx">
+      <DependentUpon>SelectEmployeeManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ViewEmployeeDetailControl.resx">
       <DependentUpon>ViewEmployeeDetailControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +122,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\NewEmployeeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewEmployeeInfoForm.Designer.cs">
+      <DependentUpon>NewEmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectEmployeeManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SelectEmployeeManagerForm.Designer.cs">
+      <DependentUpon>SelectEmployeeManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ViewEmployeeDetailControl.cs">
       <SubType>UserControl</SubType>
