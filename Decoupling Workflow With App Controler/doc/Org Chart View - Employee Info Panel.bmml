@@ -1,0 +1,31 @@
+<mockup version="1.0" skin="sketch" measuredW="452" measuredH="137">
+  <controls>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="37" y="56" w="-1" h="-1" measuredW="72" measuredH="25" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Employee%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::TextInput" x="129" y="53" w="297" h="-1" measuredW="269" measuredH="29" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Smith%2C%20Frank%20%28frank.smith@example.com%29</text>
+        <state>up</state>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="37" y="88" w="-1" h="-1" measuredW="66" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Manager%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::FieldSet" x="22" y="27" w="420" h="100" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Employee%20Details</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::TextInput" x="129" y="87" w="297" h="-1" measuredW="244" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Jones%2C%20Bob%20%28bob.jones@example.com%29</text>
+        <state>up</state>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
