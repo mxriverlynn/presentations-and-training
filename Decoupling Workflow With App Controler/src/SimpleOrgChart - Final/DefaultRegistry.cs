@@ -38,11 +38,8 @@ namespace SimpleOrgChart___Final
 			ForRequestedType<IEmployeeDetailView>()
 				.TheDefaultIsConcreteType<ViewEmployeeDetailControl>();
 
-			ForRequestedType<IAddNewEmployeeService>()
-				.TheDefaultIsConcreteType<AddNewEmployeeService>();
-
 			ForRequestedType<ICommand<AddNewEmployeeData>>()
-				.TheDefaultIsConcreteType<AddNewEmployeeCommand>();
+				.TheDefaultIsConcreteType<AddNewEmployeeService>();
 
 			ForRequestedType<IGetNewEmployeeInfo>()
 				.TheDefaultIsConcreteType<NewEmployeeInfoPresenter>();

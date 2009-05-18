@@ -45,15 +45,7 @@ namespace SimpleOrgChart___Final.UnitTests
 
 		public class AddNewEmployeeCommandContext : ContextSpecification
 		{
-			protected IAddNewEmployeeService addNewEmployeeService;
-
-			protected AddNewEmployeeCommand GetAddNewEmployeeCommand()
-			{
-				addNewEmployeeService = MockRepository.GenerateMock<IAddNewEmployeeService>();
-
-				AddNewEmployeeCommand addNewEmployeeCommand = new AddNewEmployeeCommand(addNewEmployeeService);
-				return addNewEmployeeCommand;
-			}
+			protected AddNewEmployeeService addNewEmployeeService;
 
 		}
 
@@ -76,7 +68,7 @@ namespace SimpleOrgChart___Final.UnitTests
 				appController = MockRepository.GenerateMock<IApplicationController>();
 			}
 
-			protected IAddNewEmployeeService GetAddNewEmployeeService()
+			protected AddNewEmployeeService GetAddNewEmployeeService()
 			{
 				AddNewEmployeeService service = new AddNewEmployeeService(getNewEmployeeInfo, getEmployeeManager, appController);
 				return service;
@@ -110,26 +102,6 @@ namespace SimpleOrgChart___Final.UnitTests
 
 		[TestFixture]
 		[Concern("Add New Employee")]
-		public class When_kicking_off_the_add_new_employee_process : AddNewEmployeeCommandContext
-		{
-
-			protected override void Context()
-			{
-				AddNewEmployeeCommand addNewEmployeeCommand = GetAddNewEmployeeCommand();
-				addNewEmployeeCommand.Execute(new AddNewEmployeeData());
-			}
-
-			[Test]
-			[Observation]
-			public void Should_run_the_add_new_employee_service()
-			{
-				addNewEmployeeService.AssertWasCalled(s => s.Run());
-			}
-
-		}
-
-		[TestFixture]
-		[Concern("Add New Employee")]
 		public class When_adding_a_new_employee : AddNewEmployeeSpecsContext
 		{
 
@@ -138,8 +110,8 @@ namespace SimpleOrgChart___Final.UnitTests
 				Result<EmployeeInfo> result = new Result<EmployeeInfo>(ServiceResult.Ok, employeeInfo);
 				getNewEmployeeInfo.Stub(g => g.Get()).Return(result);
 
-				IAddNewEmployeeService service = GetAddNewEmployeeService();
-				service.Run();
+				AddNewEmployeeService service = GetAddNewEmployeeService();
+				service.Execute(new AddNewEmployeeData());
 			}
 
 			[Test]
@@ -184,8 +156,8 @@ namespace SimpleOrgChart___Final.UnitTests
 			{
 				Result<EmployeeInfo> result = new Result<EmployeeInfo>(ServiceResult.Cancel);
 				getNewEmployeeInfo.Stub(g => g.Get()).Return(result);
-				IAddNewEmployeeService service = GetAddNewEmployeeService();
-				service.Run();
+				AddNewEmployeeService service = GetAddNewEmployeeService();
+				service.Execute(new AddNewEmployeeData());
 			}
 
 			[Test]

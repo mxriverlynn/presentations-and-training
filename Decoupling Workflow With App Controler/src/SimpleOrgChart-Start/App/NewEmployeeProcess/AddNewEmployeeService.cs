@@ -1,22 +1,19 @@
-using SimpleOrgChart___Final.AppController;
-using SimpleOrgChart___Final.Model;
+using SimpleOrgChart_Start.Model;
 
-namespace SimpleOrgChart___Final.App.NewEmployeeProcess
+namespace SimpleOrgChart_Start.App.NewEmployeeProcess
 {
-	public class AddNewEmployeeService : ICommand<AddNewEmployeeData>
+	public class AddNewEmployeeService : IAddNewEmployeeService
 	{
 		private IGetNewEmployeeInfo GetNewEmployeeInfo { get; set; }
 		private IGetEmployeeManager GetEmployeeManager { get; set; }
-		private IApplicationController AppController { get; set; }
 
-		public AddNewEmployeeService(IGetNewEmployeeInfo getNewEmployeeInfo, IGetEmployeeManager getEmployeeManager, IApplicationController appController)
+		public AddNewEmployeeService(IGetNewEmployeeInfo getNewEmployeeInfo, IGetEmployeeManager getEmployeeManager)
 		{
 			GetNewEmployeeInfo = getNewEmployeeInfo;
 			GetEmployeeManager = getEmployeeManager;
-			AppController = appController;
 		}
 
-		public void Execute(AddNewEmployeeData commandData)
+		public void Run()
 		{
 			Result<EmployeeInfo> result = GetNewEmployeeInfo.Get();
 			if (result.ServiceResult == ServiceResult.Ok)
@@ -26,12 +23,9 @@ namespace SimpleOrgChart___Final.App.NewEmployeeProcess
 
 				Employee manager = GetEmployeeManager.GetManagerFor(employee);
 				manager.Employees.Add(employee);
-
-				AppController.Raise(new EmployeeAddedEvent());
 			}
-		
+
 		}
 
 	}
-
 }

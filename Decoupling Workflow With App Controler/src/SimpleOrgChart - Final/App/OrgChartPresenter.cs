@@ -3,7 +3,6 @@ using EventAggregator;
 using SimpleOrgChart___Final.App.NewEmployeeProcess;
 using SimpleOrgChart___Final.AppController;
 using SimpleOrgChart___Final.Model;
-using SimpleOrgChart___Final.UnitTests;
 
 namespace SimpleOrgChart___Final.App
 {

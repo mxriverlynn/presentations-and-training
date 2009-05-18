@@ -77,9 +77,9 @@
     <Compile Include="ViewOrgChartSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleOrgChart - Final\SimpleOrgChart - Final.csproj">
+    <ProjectReference Include="..\SimpleOrgChart - Final\SimpleOrgChart.csproj">
       <Project>{CF9EACE8-A286-497B-83D9-A5F0441A989B}</Project>
-      <Name>SimpleOrgChart - Final</Name>
+      <Name>SimpleOrgChart</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

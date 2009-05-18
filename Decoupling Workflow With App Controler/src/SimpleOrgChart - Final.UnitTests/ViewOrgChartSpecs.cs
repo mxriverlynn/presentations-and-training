@@ -3,6 +3,7 @@ using NUnit.Framework;
 using Rhino.Mocks;
 using Rhino.Mocks.Constraints;
 using SimpleOrgChart___Final.App;
+using SimpleOrgChart___Final.App.NewEmployeeProcess;
 using SimpleOrgChart___Final.AppController;
 using SimpleOrgChart___Final.Model;
 using SpecUnit;

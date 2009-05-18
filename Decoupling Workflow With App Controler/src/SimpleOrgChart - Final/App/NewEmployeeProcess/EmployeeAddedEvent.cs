@@ -1,4 +1,4 @@
-namespace SimpleOrgChart___Final.UnitTests
+namespace SimpleOrgChart___Final.App.NewEmployeeProcess
 {
 	public class EmployeeAddedEvent
 	{

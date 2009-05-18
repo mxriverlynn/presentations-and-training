@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart - Final", "SimpleOrgChart - Final\SimpleOrgChart - Final.csproj", "{CF9EACE8-A286-497B-83D9-A5F0441A989B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart", "SimpleOrgChart - Final\SimpleOrgChart.csproj", "{CF9EACE8-A286-497B-83D9-A5F0441A989B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart - Final.UnitTests", "SimpleOrgChart - Final.UnitTests\SimpleOrgChart - Final.UnitTests.csproj", "{D9510FAB-D557-49BA-9EC2-493AF83420FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart.UnitTests", "SimpleOrgChart - Final.UnitTests\SimpleOrgChart.UnitTests.csproj", "{D9510FAB-D557-49BA-9EC2-493AF83420FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{9802887A-3B49-413C-98EA-0BCF72545401}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{9802887A-3B4
 		..\doc\New Employee - Manager.png = ..\doc\New Employee - Manager.png
 		..\doc\Org Chart View.png = ..\doc\Org Chart View.png
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart-Final", "SimpleOrgChart-Final", "{2A1BC54D-A09A-40B7-AD93-9359065FEC6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Start", "SimpleOrgChart - Start", "{29A4BBC1-CBAE-4D97-A668-F4617044DE3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-Start", "SimpleOrgChart-Start\SimpleOrgChart-Start.csproj", "{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,8 +32,17 @@ Global
 		{D9510FAB-D557-49BA-9EC2-493AF83420FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9510FAB-D557-49BA-9EC2-493AF83420FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9510FAB-D557-49BA-9EC2-493AF83420FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF9EACE8-A286-497B-83D9-A5F0441A989B} = {2A1BC54D-A09A-40B7-AD93-9359065FEC6D}
+		{D9510FAB-D557-49BA-9EC2-493AF83420FD} = {2A1BC54D-A09A-40B7-AD93-9359065FEC6D}
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D} = {29A4BBC1-CBAE-4D97-A668-F4617044DE3A}
 	EndGlobalSection
 EndGlobal
