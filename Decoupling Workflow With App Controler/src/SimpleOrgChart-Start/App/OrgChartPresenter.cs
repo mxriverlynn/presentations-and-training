@@ -19,14 +19,14 @@ namespace SimpleOrgChart_Start.App
 			Repository = repository;
 		}
 
-		public void Run()
-		{
-			ShowEmployeeHierarchy();
-		}
-
 		public void EmployeeSelected(Employee selectedEmployee)
 		{
 			EmployeeDetailPresenter.ShowSelectedEmployee(selectedEmployee);
+		}
+
+		public void Run()
+		{
+			ShowEmployeeHierarchy();
 		}
 
 		public void AddNewEmployeeRequested(IAddNewEmployeeService addnewEmployeeService)
