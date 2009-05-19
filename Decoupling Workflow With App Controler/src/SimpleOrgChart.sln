@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Command Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-CommandPattern", "SimpleOrgChart-CommandPattern\SimpleOrgChart-CommandPattern.csproj", "{D4E6948A-5955-496D-8DCA-4AFB9168FC86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Command Pattern Example", "Simple Command Pattern Example\Simple Command Pattern Example.csproj", "{60220936-C570-4925-860A-747D9F4B61C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60220936-C570-4925-860A-747D9F4B61C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60220936-C570-4925-860A-747D9F4B61C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60220936-C570-4925-860A-747D9F4B61C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60220936-C570-4925-860A-747D9F4B61C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +59,6 @@ Global
 		{CF9EACE8-A286-497B-83D9-A5F0441A989B} = {2A1BC54D-A09A-40B7-AD93-9359065FEC6D}
 		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D} = {29A4BBC1-CBAE-4D97-A668-F4617044DE3A}
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86} = {035C2721-5D54-4066-A848-60828147CA43}
+		{60220936-C570-4925-860A-747D9F4B61C2} = {035C2721-5D54-4066-A848-60828147CA43}
 	EndGlobalSection
 EndGlobal
