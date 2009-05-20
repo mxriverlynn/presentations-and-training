@@ -1,6 +1,6 @@
-using SimpleOrgChart_Start.Model;
+using SimpleOrgChart_Workflow.Model;
 
-namespace SimpleOrgChart_Start.App.NewEmployeeProcess
+namespace SimpleOrgChart_Workflow.App.NewEmployeeProcess
 {
 	public class AddNewEmployeeService : IAddNewEmployeeService
 	{

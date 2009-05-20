@@ -16,13 +16,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Final", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Start", "SimpleOrgChart - Start", "{29A4BBC1-CBAE-4D97-A668-F4617044DE3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-Start", "SimpleOrgChart-Start\SimpleOrgChart-Start.csproj", "{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Command Pattern", "SimpleOrgChart - Command Pattern", "{035C2721-5D54-4066-A848-60828147CA43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-CommandPattern", "SimpleOrgChart-CommandPattern\SimpleOrgChart-CommandPattern.csproj", "{D4E6948A-5955-496D-8DCA-4AFB9168FC86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Command Pattern Example", "Simple Command Pattern Example\Simple Command Pattern Example.csproj", "{60220936-C570-4925-860A-747D9F4B61C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Workflow", "SimpleOrgChart - Workflow", "{EAF19370-BD1C-434C-AD8B-87BD5BFA56A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-Workflow", "SimpleOrgChart-Workflow\SimpleOrgChart-Workflow.csproj", "{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-Start", "SimpleOrgChart-Start\SimpleOrgChart-Start.csproj", "{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,10 +42,6 @@ Global
 		{D9510FAB-D557-49BA-9EC2-493AF83420FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9510FAB-D557-49BA-9EC2-493AF83420FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9510FAB-D557-49BA-9EC2-493AF83420FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -50,6 +50,14 @@ Global
 		{60220936-C570-4925-860A-747D9F4B61C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60220936-C570-4925-860A-747D9F4B61C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60220936-C570-4925-860A-747D9F4B61C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +68,6 @@ Global
 		{A0B6BB03-5530-4CCD-9A7A-2F61648F698D} = {29A4BBC1-CBAE-4D97-A668-F4617044DE3A}
 		{D4E6948A-5955-496D-8DCA-4AFB9168FC86} = {035C2721-5D54-4066-A848-60828147CA43}
 		{60220936-C570-4925-860A-747D9F4B61C2} = {035C2721-5D54-4066-A848-60828147CA43}
+		{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2} = {EAF19370-BD1C-434C-AD8B-87BD5BFA56A5}
 	EndGlobalSection
 EndGlobal

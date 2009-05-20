@@ -1,20 +1,17 @@
-using SimpleOrgChart_Start.Model;
-
-namespace SimpleOrgChart_Start.App.NewEmployeeProcess.SupplyEmployeeInfo
+namespace SimpleOrgChart_Workflow.App.NewEmployeeProcess.SupplyEmployeeInfo
 {
-	public class NewEmployeeInfoPresenter : IGetNewEmployeeInfo
+
+	public class NewEmployeeInfoPresenter: IGetNewEmployeeInfo
 	{
 		private INewEmployeeInfoView View { get; set; }
-		private IGetEmployeeManager GetEmployeeManager { get; set; }
 		private string LastName { get; set; }
 		private string FirstName { get; set; }
 		private string Email { get; set; }
 		private ServiceResult ServiceResult { get; set; }
 
-		public NewEmployeeInfoPresenter(INewEmployeeInfoView view, IGetEmployeeManager getEmployeeManager)
+		public NewEmployeeInfoPresenter(INewEmployeeInfoView view)
 		{
 			View = view;
-			GetEmployeeManager = getEmployeeManager;
 			View.Presenter = this;
 		}
 
@@ -33,15 +30,21 @@ namespace SimpleOrgChart_Start.App.NewEmployeeProcess.SupplyEmployeeInfo
 			Email = email;
 		}
 
-		public void Run()
+		public Result<EmployeeInfo> Get()
 		{
 			View.Run();
-			Employee employee = new Employee(FirstName, LastName, Email);
+			EmployeeInfo info = null;
 			if (ServiceResult == ServiceResult.Ok)
 			{
-				Employee manager = GetEmployeeManager.GetManagerFor(employee);
-				manager.Employees.Add(employee);
+				info = new EmployeeInfo
+					{
+						FirstName = FirstName,
+						LastName = LastName,
+						Email = Email
+					};
 			}
+			Result<EmployeeInfo> result = new Result<EmployeeInfo>(ServiceResult, info);
+			return result;
 		}
 
 		public void Next()

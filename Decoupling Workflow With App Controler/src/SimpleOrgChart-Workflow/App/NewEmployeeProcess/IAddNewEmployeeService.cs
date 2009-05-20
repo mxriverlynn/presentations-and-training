@@ -1,4 +1,4 @@
-namespace SimpleOrgChart_Start.App.NewEmployeeProcess
+namespace SimpleOrgChart_Workflow.App.NewEmployeeProcess
 {
 	public interface IAddNewEmployeeService
 	{

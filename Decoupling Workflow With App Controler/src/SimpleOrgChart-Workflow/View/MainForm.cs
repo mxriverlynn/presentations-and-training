@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using SimpleOrgChart_Start.App;
-using SimpleOrgChart_Start.App.NewEmployeeProcess.SelectEmployeeManager;
-using SimpleOrgChart_Start.App.NewEmployeeProcess.SupplyEmployeeInfo;
-using SimpleOrgChart_Start.Model;
+using SimpleOrgChart_Workflow.App;
+using SimpleOrgChart_Workflow.App.NewEmployeeProcess;
+using SimpleOrgChart_Workflow.App.NewEmployeeProcess.SelectEmployeeManager;
+using SimpleOrgChart_Workflow.App.NewEmployeeProcess.SupplyEmployeeInfo;
+using SimpleOrgChart_Workflow.Model;
 
-namespace SimpleOrgChart_Start.View
+namespace SimpleOrgChart_Workflow.View
 {
 	public partial class MainForm : Form, IOrgChartView
 	{
@@ -64,13 +65,15 @@ namespace SimpleOrgChart_Start.View
 
 		private void AddNewEmployee_Click(object sender, System.EventArgs e)
 		{
+			NewEmployeeInfoForm newEmployeeInfoForm = new NewEmployeeInfoForm();
+			NewEmployeeInfoPresenter newEmployeeInfoPresenter = new NewEmployeeInfoPresenter(newEmployeeInfoForm);
+
 			SelectEmployeeManagerForm selectEmployeeManagerForm = new SelectEmployeeManagerForm();
 			SelectEmployeeManagerPresenter selectEmployeeManagerPresenter = new SelectEmployeeManagerPresenter(selectEmployeeManagerForm, EmployeeRepository);
-
-			NewEmployeeInfoForm newEmployeeInfoForm = new NewEmployeeInfoForm();
-			NewEmployeeInfoPresenter newEmployeeInfoPresenter = new NewEmployeeInfoPresenter(newEmployeeInfoForm, selectEmployeeManagerPresenter);
-
-			Presenter.AddNewEmployeeRequested(newEmployeeInfoPresenter);
+			
+			IAddNewEmployeeService addNewEmployeeService = new AddNewEmployeeService(newEmployeeInfoPresenter, selectEmployeeManagerPresenter);
+			
+			Presenter.AddNewEmployeeRequested(addNewEmployeeService);
 		}
 
 	}

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using SimpleOrgChart_Workflow;
 
-namespace SimpleOrgChart_CommandPattern
+namespace SimpleOrgChart_Workflow
 {
 	static class Program
 	{

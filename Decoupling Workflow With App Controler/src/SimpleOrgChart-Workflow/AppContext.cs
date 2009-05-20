@@ -1,8 +1,8 @@
 using System.Windows.Forms;
-using SimpleOrgChart_CommandPattern.App;
-using SimpleOrgChart_CommandPattern.Model;
-using SimpleOrgChart_CommandPattern.Repositories;
-using SimpleOrgChart_CommandPattern.View;
+using SimpleOrgChart_Workflow.App;
+using SimpleOrgChart_Workflow.Model;
+using SimpleOrgChart_Workflow.Repositories;
+using SimpleOrgChart_Workflow.View;
 
 namespace SimpleOrgChart_Workflow
 {

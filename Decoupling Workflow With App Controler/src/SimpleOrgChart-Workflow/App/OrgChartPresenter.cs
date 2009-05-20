@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using SimpleOrgChart_Start.App.NewEmployeeProcess;
-using SimpleOrgChart_Start.Model;
+using SimpleOrgChart_Workflow.App.NewEmployeeProcess;
+using SimpleOrgChart_Workflow.Model;
 
-namespace SimpleOrgChart_Start.App
+namespace SimpleOrgChart_Workflow.App
 {
 	public class OrgChartPresenter
 	{
@@ -29,9 +29,9 @@ namespace SimpleOrgChart_Start.App
 			ShowEmployeeHierarchy();
 		}
 
-		public void AddNewEmployeeRequested(IGetNewEmployeeInfo getNewEmployeeInfo)
+		public void AddNewEmployeeRequested(IAddNewEmployeeService addnewEmployeeService)
 		{
-			getNewEmployeeInfo.Run();
+			addnewEmployeeService.Run();
 			ShowEmployeeHierarchy();
 		}
 
