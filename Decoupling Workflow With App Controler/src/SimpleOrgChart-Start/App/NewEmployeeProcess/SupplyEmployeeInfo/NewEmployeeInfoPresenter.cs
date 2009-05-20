@@ -14,8 +14,19 @@ namespace SimpleOrgChart_Start.App.NewEmployeeProcess.SupplyEmployeeInfo
 		public NewEmployeeInfoPresenter(INewEmployeeInfoView view, IGetEmployeeManager getEmployeeManager)
 		{
 			View = view;
-			GetEmployeeManager = getEmployeeManager;
 			View.Presenter = this;
+			GetEmployeeManager = getEmployeeManager;
+		}
+
+		public void Run()
+		{
+			View.Run();
+			Employee employee = new Employee(FirstName, LastName, Email);
+			if (ServiceResult == ServiceResult.Ok)
+			{
+				Employee manager = GetEmployeeManager.GetManagerFor(employee);
+				manager.Employees.Add(employee);
+			}
 		}
 
 		public void FirstNameSupplied(string firstname)
@@ -31,17 +42,6 @@ namespace SimpleOrgChart_Start.App.NewEmployeeProcess.SupplyEmployeeInfo
 		public void EmailSupplied(string email)
 		{
 			Email = email;
-		}
-
-		public void Run()
-		{
-			View.Run();
-			Employee employee = new Employee(FirstName, LastName, Email);
-			if (ServiceResult == ServiceResult.Ok)
-			{
-				Employee manager = GetEmployeeManager.GetManagerFor(employee);
-				manager.Employees.Add(employee);
-			}
 		}
 
 		public void Next()

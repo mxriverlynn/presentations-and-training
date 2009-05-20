@@ -5,28 +5,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart", "SimpleOrg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart.UnitTests", "SimpleOrgChart - Final.UnitTests\SimpleOrgChart.UnitTests.csproj", "{D9510FAB-D557-49BA-9EC2-493AF83420FD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{9802887A-3B49-413C-98EA-0BCF72545401}"
-	ProjectSection(SolutionItems) = preProject
-		..\doc\New Employee - Info.png = ..\doc\New Employee - Info.png
-		..\doc\New Employee - Manager.png = ..\doc\New Employee - Manager.png
-		..\doc\Org Chart View.png = ..\doc\Org Chart View.png
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - SimpleOrgChart - Final", "5 - SimpleOrgChart - Final", "{2A1BC54D-A09A-40B7-AD93-9359065FEC6D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Final", "SimpleOrgChart - Final", "{2A1BC54D-A09A-40B7-AD93-9359065FEC6D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - SimpleOrgChart - Start", "1 - SimpleOrgChart - Start", "{29A4BBC1-CBAE-4D97-A668-F4617044DE3A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Start", "SimpleOrgChart - Start", "{29A4BBC1-CBAE-4D97-A668-F4617044DE3A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Command Pattern", "SimpleOrgChart - Command Pattern", "{035C2721-5D54-4066-A848-60828147CA43}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - SimpleOrgChart - Command Pattern", "3 - SimpleOrgChart - Command Pattern", "{035C2721-5D54-4066-A848-60828147CA43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-CommandPattern", "SimpleOrgChart-CommandPattern\SimpleOrgChart-CommandPattern.csproj", "{D4E6948A-5955-496D-8DCA-4AFB9168FC86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Command Pattern Example", "Simple Command Pattern Example\Simple Command Pattern Example.csproj", "{60220936-C570-4925-860A-747D9F4B61C2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleOrgChart - Workflow", "SimpleOrgChart - Workflow", "{EAF19370-BD1C-434C-AD8B-87BD5BFA56A5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - SimpleOrgChart - Workflow", "2 - SimpleOrgChart - Workflow", "{EAF19370-BD1C-434C-AD8B-87BD5BFA56A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-Workflow", "SimpleOrgChart-Workflow\SimpleOrgChart-Workflow.csproj", "{23CB7C8F-70D9-404D-A0E0-5FE65A6BE2C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleOrgChart-Start", "SimpleOrgChart-Start\SimpleOrgChart-Start.csproj", "{A0B6BB03-5530-4CCD-9A7A-2F61648F698D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - SimpleOrgChart - Event Aggregator", "4 - SimpleOrgChart - Event Aggregator", "{6E559C26-4779-4A6C-8D58-EC1F72E3E8C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
