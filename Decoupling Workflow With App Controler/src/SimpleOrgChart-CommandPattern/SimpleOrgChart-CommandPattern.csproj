@@ -50,9 +50,12 @@
   <ItemGroup>
     <Compile Include="AppContext.cs" />
     <Compile Include="App\EmployeeDetailPresenter.cs" />
+    <Compile Include="App\ICommand.cs" />
     <Compile Include="App\IEmployeeDetailPresenter.cs" />
     <Compile Include="App\IEmployeeDetailView.cs" />
     <Compile Include="App\IOrgChartView.cs" />
+    <Compile Include="App\NewEmployeeProcess\AddNewEmployeeCommand.cs" />
+    <Compile Include="App\NewEmployeeProcess\AddNewEmployeeData.cs" />
     <Compile Include="App\NewEmployeeProcess\AddNewEmployeeService.cs" />
     <Compile Include="App\NewEmployeeProcess\EmployeeInfo.cs" />
     <Compile Include="App\NewEmployeeProcess\IAddNewEmployeeService.cs" />

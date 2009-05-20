@@ -1,22 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using SimpleOrgChart_CommandPattern.App;
-using SimpleOrgChart_CommandPattern.App.NewEmployeeProcess;
-using SimpleOrgChart_CommandPattern.App.NewEmployeeProcess.SelectEmployeeManager;
-using SimpleOrgChart_CommandPattern.App.NewEmployeeProcess.SupplyEmployeeInfo;
 using SimpleOrgChart_CommandPattern.Model;
 
 namespace SimpleOrgChart_CommandPattern.View
 {
+
 	public partial class MainForm : Form, IOrgChartView
 	{
-		private IEmployeeRepository EmployeeRepository { get; set; }
-
+	
 		public OrgChartPresenter Presenter { get; set; }
 
-		public MainForm(IEmployeeRepository repository)
+		public MainForm()
 		{
-			EmployeeRepository = repository;
 			InitializeComponent();
 		}
 
@@ -65,16 +61,9 @@ namespace SimpleOrgChart_CommandPattern.View
 
 		private void AddNewEmployee_Click(object sender, System.EventArgs e)
 		{
-			NewEmployeeInfoForm newEmployeeInfoForm = new NewEmployeeInfoForm();
-			NewEmployeeInfoPresenter newEmployeeInfoPresenter = new NewEmployeeInfoPresenter(newEmployeeInfoForm);
-
-			SelectEmployeeManagerForm selectEmployeeManagerForm = new SelectEmployeeManagerForm();
-			SelectEmployeeManagerPresenter selectEmployeeManagerPresenter = new SelectEmployeeManagerPresenter(selectEmployeeManagerForm, EmployeeRepository);
-			
-			IAddNewEmployeeService addNewEmployeeService = new AddNewEmployeeService(newEmployeeInfoPresenter, selectEmployeeManagerPresenter);
-			
-			Presenter.AddNewEmployeeRequested(addNewEmployeeService);
+			Presenter.AddNewEmployeeRequested();
 		}
 
 	}
+
 }

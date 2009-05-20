@@ -41,7 +41,7 @@
 			this.OrgChart.TabIndex = 0;
 			this.OrgChart.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.OrgChart_AfterSelect);
 			// 
-			// AddNewEmployee
+			// AddNewEmployeeData
 			// 
 			this.AddNewEmployee.Location = new System.Drawing.Point(12, 309);
 			this.AddNewEmployee.Name = "AddNewEmployee";

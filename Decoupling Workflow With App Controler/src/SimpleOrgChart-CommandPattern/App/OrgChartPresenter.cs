@@ -9,12 +9,14 @@ namespace SimpleOrgChart_CommandPattern.App
 
 		private IOrgChartView View { get; set; }
 		private IEmployeeDetailPresenter EmployeeDetailPresenter { get; set; }
+		private ICommand<AddNewEmployeeData> AddNewEmployeeCommand { get; set; }
 		private IEmployeeRepository Repository { get; set; }
 
-		public OrgChartPresenter(IOrgChartView view, IEmployeeRepository repository, IEmployeeDetailPresenter employeeDetailPresenter)
+		public OrgChartPresenter(IOrgChartView view, IEmployeeRepository repository, IEmployeeDetailPresenter employeeDetailPresenter, ICommand<AddNewEmployeeData> addNewEmployeeCommand)
 		{
 			View = view;
 			EmployeeDetailPresenter = employeeDetailPresenter;
+			AddNewEmployeeCommand = addNewEmployeeCommand;
 			View.Presenter = this;
 			Repository = repository;
 		}
@@ -29,9 +31,9 @@ namespace SimpleOrgChart_CommandPattern.App
 			ShowEmployeeHierarchy();
 		}
 
-		public void AddNewEmployeeRequested(IAddNewEmployeeService addnewEmployeeService)
+		public void AddNewEmployeeRequested()
 		{
-			addnewEmployeeService.Run();
+			AddNewEmployeeCommand.Execute(new AddNewEmployeeData());
 			ShowEmployeeHierarchy();
 		}
 

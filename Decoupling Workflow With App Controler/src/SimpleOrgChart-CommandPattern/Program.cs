@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using SimpleOrgChart_Workflow;
 
 namespace SimpleOrgChart_CommandPattern
 {
