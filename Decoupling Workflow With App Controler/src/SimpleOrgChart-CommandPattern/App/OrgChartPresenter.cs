@@ -21,6 +21,12 @@ namespace SimpleOrgChart_CommandPattern.App
 			Repository = repository;
 		}
 
+		public void AddNewEmployeeRequested()
+		{
+			AddNewEmployeeCommand.Execute(new AddNewEmployeeData());
+			ShowEmployeeHierarchy();
+		}
+
 		public void EmployeeSelected(Employee selectedEmployee)
 		{
 			EmployeeDetailPresenter.ShowSelectedEmployee(selectedEmployee);
@@ -28,12 +34,6 @@ namespace SimpleOrgChart_CommandPattern.App
 
 		public void Run()
 		{
-			ShowEmployeeHierarchy();
-		}
-
-		public void AddNewEmployeeRequested()
-		{
-			AddNewEmployeeCommand.Execute(new AddNewEmployeeData());
 			ShowEmployeeHierarchy();
 		}
 

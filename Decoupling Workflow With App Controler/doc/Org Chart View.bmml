@@ -20,17 +20,17 @@
       <controlProperties>
         <close>true</close>
         <topheight>28</topheight>
+        <dragger>true</dragger>
         <minimize>true</minimize>
         <verticalScrollbar>false</verticalScrollbar>
-        <dragger>true</dragger>
         <bottomheight>20</bottomheight>
-        <maximizeRestore>true</maximizeRestore>
         <text>Simple%20Org%20Chart</text>
+        <maximizeRestore>true</maximizeRestore>
       </controlProperties>
     </control>
     <control controlID="4" controlTypeID="com.balsamiq.mockups::Tree" x="41" y="62" w="420" h="206" measuredW="300" measuredH="220" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>%5B-%5D%20Jones%2C%20Bob%0A..%5B-%5D%20Smith%2C%20Frank%20</text>
+        <text>%5B-%5D%20Jones%2C%20Bob%0A..%5B-%5D%20Smith%2C%20Frank%20%0A%5B+%5D%20expand%20me</text>
       </controlProperties>
     </control>
     <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="41" y="388" w="144" h="-1" measuredW="144" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
