@@ -57,6 +57,7 @@
     <Compile Include="App\NewEmployeeProcess\AddNewEmployeeCommand.cs" />
     <Compile Include="App\NewEmployeeProcess\AddNewEmployeeData.cs" />
     <Compile Include="App\NewEmployeeProcess\AddNewEmployeeService.cs" />
+    <Compile Include="App\NewEmployeeProcess\EmployeeAddedEvent.cs" />
     <Compile Include="App\NewEmployeeProcess\EmployeeInfo.cs" />
     <Compile Include="App\NewEmployeeProcess\IAddNewEmployeeService.cs" />
     <Compile Include="App\NewEmployeeProcess\IGetEmployeeManager.cs" />

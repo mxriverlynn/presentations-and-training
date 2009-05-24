@@ -26,9 +26,10 @@ namespace SimpleOrgChart_EventAggregator
 			EmployeeDetailPresenter employeeDetailPresenter = new EmployeeDetailPresenter(mainForm.ViewEmployeeDetail);
 			eventPublisher.RegisterHandlers(employeeDetailPresenter);
 
-			ICommand<AddNewEmployeeData> addNewEmployeeCommand = new AddNewEmployeeCommand(employeeRepository);
+			ICommand<AddNewEmployeeData> addNewEmployeeCommand = new AddNewEmployeeCommand(employeeRepository, eventPublisher);
 
 			OrgChartPresenter presenter = new OrgChartPresenter(mainForm, employeeRepository, eventPublisher, addNewEmployeeCommand);
+			eventPublisher.RegisterHandlers(presenter);
 			presenter.Run();
 			
 			return mainForm;

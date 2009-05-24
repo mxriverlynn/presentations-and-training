@@ -1,4 +1,5 @@
-﻿using SimpleOrgChart_EventAggregator.App.NewEmployeeProcess.SelectEmployeeManager;
+﻿using EventAggregator;
+using SimpleOrgChart_EventAggregator.App.NewEmployeeProcess.SelectEmployeeManager;
 using SimpleOrgChart_EventAggregator.App.NewEmployeeProcess.SupplyEmployeeInfo;
 using SimpleOrgChart_EventAggregator.Model;
 using SimpleOrgChart_EventAggregator.View;
@@ -10,10 +11,12 @@ namespace SimpleOrgChart_EventAggregator.App.NewEmployeeProcess
 	{
 
 		private IEmployeeRepository EmployeeRepository { get; set; }
+		private IEventPublisher EventPublisher { get; set; }
 
-		public AddNewEmployeeCommand(IEmployeeRepository employeeRepository)
+		public AddNewEmployeeCommand(IEmployeeRepository employeeRepository, IEventPublisher eventPublisher)
 		{
 			EmployeeRepository = employeeRepository;
+			EventPublisher = eventPublisher;
 		}
 
 		public void Execute(AddNewEmployeeData data)
@@ -24,7 +27,7 @@ namespace SimpleOrgChart_EventAggregator.App.NewEmployeeProcess
 			SelectEmployeeManagerForm selectEmployeeManagerForm = new SelectEmployeeManagerForm();
 			SelectEmployeeManagerPresenter selectEmployeeManagerPresenter = new SelectEmployeeManagerPresenter(selectEmployeeManagerForm, EmployeeRepository);
 
-			IAddNewEmployeeService addNewEmployeeService = new AddNewEmployeeService(newEmployeeInfoPresenter, selectEmployeeManagerPresenter);
+			IAddNewEmployeeService addNewEmployeeService = new AddNewEmployeeService(newEmployeeInfoPresenter, selectEmployeeManagerPresenter, EventPublisher);
 			addNewEmployeeService.Run();
 		}
 

@@ -1,3 +1,4 @@
+using EventAggregator;
 using SimpleOrgChart_EventAggregator.Model;
 
 namespace SimpleOrgChart_EventAggregator.App.NewEmployeeProcess
@@ -6,11 +7,13 @@ namespace SimpleOrgChart_EventAggregator.App.NewEmployeeProcess
 	{
 		private IGetNewEmployeeInfo GetNewEmployeeInfo { get; set; }
 		private IGetEmployeeManager GetEmployeeManager { get; set; }
+		private IEventPublisher EventPublisher { get; set; }
 
-		public AddNewEmployeeService(IGetNewEmployeeInfo getNewEmployeeInfo, IGetEmployeeManager getEmployeeManager)
+		public AddNewEmployeeService(IGetNewEmployeeInfo getNewEmployeeInfo, IGetEmployeeManager getEmployeeManager, IEventPublisher eventPublisher)
 		{
 			GetNewEmployeeInfo = getNewEmployeeInfo;
 			GetEmployeeManager = getEmployeeManager;
+			EventPublisher = eventPublisher;
 		}
 
 		public void Run()
@@ -23,6 +26,8 @@ namespace SimpleOrgChart_EventAggregator.App.NewEmployeeProcess
 
 				Employee manager = GetEmployeeManager.GetManagerFor(employee);
 				manager.Employees.Add(employee);
+
+				EventPublisher.Publish(new EmployeeAddedEvent());
 			}
 
 		}

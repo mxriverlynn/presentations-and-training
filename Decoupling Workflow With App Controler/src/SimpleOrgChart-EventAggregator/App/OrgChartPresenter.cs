@@ -5,7 +5,7 @@ using SimpleOrgChart_EventAggregator.Model;
 
 namespace SimpleOrgChart_EventAggregator.App
 {
-	public class OrgChartPresenter
+	public class OrgChartPresenter: IEventHandler<EmployeeAddedEvent>
 	{
 
 		private IOrgChartView View { get; set; }
@@ -25,7 +25,6 @@ namespace SimpleOrgChart_EventAggregator.App
 		public void AddNewEmployeeRequested()
 		{
 			AddNewEmployeeCommand.Execute(new AddNewEmployeeData());
-			ShowEmployeeHierarchy();
 		}
 
 		public void EmployeeSelected(Employee selectedEmployee)
@@ -38,11 +37,15 @@ namespace SimpleOrgChart_EventAggregator.App
 			ShowEmployeeHierarchy();
 		}
 
+		public void Handle(EmployeeAddedEvent eventData)
+		{
+			ShowEmployeeHierarchy();
+		}
+
 		private void ShowEmployeeHierarchy()
 		{
 			IList<Employee> employeeList = Repository.GetEmployeeOrgChart();
 			View.DisplayEmployeeHierarchy(employeeList);
 		}
-
 	}
 }
