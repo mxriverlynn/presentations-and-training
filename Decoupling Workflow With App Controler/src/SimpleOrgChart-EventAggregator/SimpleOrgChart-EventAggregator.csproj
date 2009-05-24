@@ -50,8 +50,8 @@
   <ItemGroup>
     <Compile Include="AppContext.cs" />
     <Compile Include="App\EmployeeDetailPresenter.cs" />
+    <Compile Include="App\EmployeeSelectedEvent.cs" />
     <Compile Include="App\ICommand.cs" />
-    <Compile Include="App\IEmployeeDetailPresenter.cs" />
     <Compile Include="App\IEmployeeDetailView.cs" />
     <Compile Include="App\IOrgChartView.cs" />
     <Compile Include="App\NewEmployeeProcess\AddNewEmployeeCommand.cs" />
@@ -128,6 +128,16 @@
     <Compile Include="View\ViewEmployeeDetailControl.Designer.cs">
       <DependentUpon>ViewEmployeeDetailControl.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
+      <Project>{E83117B4-DAA0-4079-9B68-126E93261FD6}</Project>
+      <Name>EventAggregator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleOrgChart - Final\SimpleOrgChart.csproj">
+      <Project>{CF9EACE8-A286-497B-83D9-A5F0441A989B}</Project>
+      <Name>SimpleOrgChart</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

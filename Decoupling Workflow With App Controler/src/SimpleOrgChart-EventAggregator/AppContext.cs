@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using EventAggregator;
 using SimpleOrgChart_EventAggregator.App;
 using SimpleOrgChart_EventAggregator.App.NewEmployeeProcess;
 using SimpleOrgChart_EventAggregator.Model;
@@ -18,12 +19,16 @@ namespace SimpleOrgChart_EventAggregator
 		private Form GetMainForm()
 		{
 			IEmployeeRepository employeeRepository = new InMemoryEmployeeRepository();
+
+			IEventPublisher eventPublisher = new EventPublisher();
 			
 			MainForm mainForm = new MainForm();
-			IEmployeeDetailPresenter employeeDetailPresenter = new EmployeeDetailPresenter(mainForm.ViewEmployeeDetail);
+			EmployeeDetailPresenter employeeDetailPresenter = new EmployeeDetailPresenter(mainForm.ViewEmployeeDetail);
+			eventPublisher.RegisterHandlers(employeeDetailPresenter);
+
 			ICommand<AddNewEmployeeData> addNewEmployeeCommand = new AddNewEmployeeCommand(employeeRepository);
 
-			OrgChartPresenter presenter = new OrgChartPresenter(mainForm, employeeRepository, employeeDetailPresenter, addNewEmployeeCommand);
+			OrgChartPresenter presenter = new OrgChartPresenter(mainForm, employeeRepository, eventPublisher, addNewEmployeeCommand);
 			presenter.Run();
 			
 			return mainForm;

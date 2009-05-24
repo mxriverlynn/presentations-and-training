@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EventAggregator, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\EventAggregator.dll</HintPath>
-    </Reference>
     <Reference Include="StructureMap, Version=2.5.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\StructureMap.dll</HintPath>
@@ -139,6 +135,12 @@
     <Compile Include="View\ViewEmployeeDetailControl.Designer.cs">
       <DependentUpon>ViewEmployeeDetailControl.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
+      <Project>{E83117B4-DAA0-4079-9B68-126E93261FD6}</Project>
+      <Name>EventAggregator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

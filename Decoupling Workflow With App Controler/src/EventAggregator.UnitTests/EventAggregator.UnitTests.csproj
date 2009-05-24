@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D9510FAB-D557-49BA-9EC2-493AF83420FD}</ProjectGuid>
+    <ProjectGuid>{43544158-F4E6-43A5-A984-C3B9A4E26986}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleOrgChart___Final.UnitTests</RootNamespace>
-    <AssemblyName>SimpleOrgChart - Final.UnitTests</AssemblyName>
+    <RootNamespace>EventAggregator.UnitTests</RootNamespace>
+    <AssemblyName>EventAggregator.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -65,21 +65,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewEmployeeSpecs.cs" />
+    <Compile Include="CachedEventDataSpecs.cs" />
+    <Compile Include="EventAggregatorSpecs.cs" />
+    <Compile Include="ExceptionHandlingSpecs.cs" />
+    <Compile Include="MultipleHandlerRegistrationSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectManagerSpec.cs" />
-    <Compile Include="SupplyNewEmployeeInfoSpecs.cs" />
-    <Compile Include="ViewEmployeeDetailSpecs.cs" />
-    <Compile Include="ViewOrgChartSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
       <Project>{E83117B4-DAA0-4079-9B68-126E93261FD6}</Project>
       <Name>EventAggregator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleOrgChart - Final\SimpleOrgChart.csproj">
-      <Project>{CF9EACE8-A286-497B-83D9-A5F0441A989B}</Project>
-      <Name>SimpleOrgChart</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

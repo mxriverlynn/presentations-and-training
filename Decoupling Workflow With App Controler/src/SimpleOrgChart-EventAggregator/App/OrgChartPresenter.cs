@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using EventAggregator;
 using SimpleOrgChart_EventAggregator.App.NewEmployeeProcess;
 using SimpleOrgChart_EventAggregator.Model;
 
@@ -8,17 +9,17 @@ namespace SimpleOrgChart_EventAggregator.App
 	{
 
 		private IOrgChartView View { get; set; }
-		private IEmployeeDetailPresenter EmployeeDetailPresenter { get; set; }
 		private ICommand<AddNewEmployeeData> AddNewEmployeeCommand { get; set; }
 		private IEmployeeRepository Repository { get; set; }
+		private IEventPublisher EventPublisher { get; set; }
 
-		public OrgChartPresenter(IOrgChartView view, IEmployeeRepository repository, IEmployeeDetailPresenter employeeDetailPresenter, ICommand<AddNewEmployeeData> addNewEmployeeCommand)
+		public OrgChartPresenter(IOrgChartView view, IEmployeeRepository repository, IEventPublisher eventPublisher, ICommand<AddNewEmployeeData> addNewEmployeeCommand)
 		{
 			View = view;
-			EmployeeDetailPresenter = employeeDetailPresenter;
 			AddNewEmployeeCommand = addNewEmployeeCommand;
 			View.Presenter = this;
 			Repository = repository;
+			EventPublisher = eventPublisher;
 		}
 
 		public void AddNewEmployeeRequested()
@@ -29,7 +30,7 @@ namespace SimpleOrgChart_EventAggregator.App
 
 		public void EmployeeSelected(Employee selectedEmployee)
 		{
-			EmployeeDetailPresenter.ShowSelectedEmployee(selectedEmployee);
+			EventPublisher.Publish(new EmployeeSelectedEvent(selectedEmployee));
 		}
 
 		public void Run()

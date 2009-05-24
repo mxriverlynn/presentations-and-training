@@ -1,8 +1,9 @@
+using EventAggregator;
 using SimpleOrgChart_EventAggregator.Model;
 
 namespace SimpleOrgChart_EventAggregator.App
 {
-	public class EmployeeDetailPresenter: IEmployeeDetailPresenter
+	public class EmployeeDetailPresenter: IEventHandler<EmployeeSelectedEvent>
 	{
 
 		private IEmployeeDetailView View { get; set; }
@@ -12,8 +13,9 @@ namespace SimpleOrgChart_EventAggregator.App
 			View = view;
 		}
 
-		public void ShowSelectedEmployee(Employee employee)
+		public void Handle(EmployeeSelectedEvent eventData)
 		{
+			Employee employee = eventData.Employee;
 			View.DisplayEmployeeName(employee.FirstName, employee.LastName);
 			View.DisplayEmployeeEmail(employee.Email);
 		}
