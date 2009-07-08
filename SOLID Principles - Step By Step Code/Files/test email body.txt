@@ -1,1 +1,1 @@
-this is a test! we're showing a poorly designed application, that perfectly fine, but breaks all of the principles that we care about!
+this is some sort of error log. the detail here is unimportant. what is important is that we delivered this functionality quickly, like the CTO wanted.
