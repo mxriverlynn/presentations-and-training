@@ -1,0 +1,4 @@
+Title: The Kanban Game
+
+Description:
+Introducing Kanban through a dice game, to educate on the power of pull systems as a productivity and change management technique.
