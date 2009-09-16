@@ -1,4 +1,3 @@
-Title: Pull, Don't Push: Getting Started With Kanban In Software Engineering
+Title: Introducing Kanban - Balancing Demand And Capacity
 
 Description:
-How to get started with kanban in software engineering
